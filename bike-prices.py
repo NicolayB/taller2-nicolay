@@ -1,5 +1,6 @@
 import numpy as np
 import pandas as pd
+import matplotlib.pyplot as plt
 
 df = pd.read_csv("BikePrices.csv")
 print(df.head())
@@ -34,4 +35,7 @@ print('Number of Bikes: %d'%(df.shape[0]))
 print('Data Types and Frequency in Dataset:')
 print(types)
 
-hist_pd = df.hist("Selling_Price")
+plt.hist(df["Selling_Price"])
+plt.title("Histograma de precios de venta")
+plt.xlabel("Precio")
+plt.show()
