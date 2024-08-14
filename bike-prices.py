@@ -28,6 +28,7 @@ missing_values = df.isnull().sum().sum()
 print("\n", f'Number of Missing Values: {missing_values}')
 
 print("\n")
+
 # Tipos de datos en el dataset
 types = df.dtypes.value_counts()
 print('Number of Features: %d'%(df.shape[1]))
@@ -35,7 +36,12 @@ print('Number of Bikes: %d'%(df.shape[0]))
 print('Data Types and Frequency in Dataset:')
 print(types)
 
+# Histograma
 plt.hist(df["Selling_Price"])
 plt.title("Histograma de precios de venta")
 plt.xlabel("Precio")
 plt.show()
+
+# Promedio de preciosa de venta
+media = round(np.mean(df["Selling_Price"]),2)
+print(media)
