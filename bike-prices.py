@@ -1,6 +1,9 @@
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+import mplfinance as mpf
+from scipy.optimize import brentq
+from scipy import stats
 
 df = pd.read_csv("BikePrices.csv")
 print(df.head())
@@ -45,7 +48,6 @@ mediana = round(np.std(df["Selling_Price"]),2)
 varianza = round(np.var(df["Selling_Price"]),2)
 rango = np.ptp(df["Selling_Price"])
 print(rango)
-
 
 
 
