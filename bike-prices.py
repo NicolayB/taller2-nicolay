@@ -36,12 +36,16 @@ print('Number of Bikes: %d'%(df.shape[0]))
 print('Data Types and Frequency in Dataset:')
 print(types)
 
-# Histograma
-plt.hist(df["Selling_Price"])
-plt.title("Histograma de precios de venta")
-plt.xlabel("Precio")
-plt.show()
-
 # Promedio de preciosa de venta
 media = round(np.mean(df["Selling_Price"]),2)
 print(media)
+
+#Estadisticas descriptivas del precio de venta
+mediana = round(np.std(df["Selling_Price"]),2)
+varianza = round(np.var(df["Selling_Price"]),2)
+rango = np.ptp(df["Selling_Price"])
+print(rango)
+
+
+
+
